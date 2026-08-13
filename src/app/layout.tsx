@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Muna — grandir ensemble",
   description:
     "Plateforme inclusive pour la parentalité positive au Cameroun : assistant multilingue, micro-apprentissage, accessibilité et bas-débit.",
+  icons: { icon: "/icon-192.png", apple: "/icon-192.png" },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -28,7 +29,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <header className="sticky top-0 z-30 border-b border-soft bg-cream/90 backdrop-blur">
             <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3">
               <Link href="/" className="flex items-center gap-2 text-xl font-extrabold text-brand-dark">
-                <span aria-hidden>🌱</span> Muna
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/icon-192.png" alt="" className="h-9 w-9 rounded-full object-cover" />
+                Muna
               </Link>
               <div className="flex items-center gap-3">
                 <Nav />

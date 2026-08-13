@@ -6,7 +6,7 @@ const SHELL = [
   "/apprendre",
   "/facilitateur",
   "/tableau-de-bord",
-  "/icon.svg",
+  "/icon-192.png",
 ];
 
 self.addEventListener("install", (e) => {
