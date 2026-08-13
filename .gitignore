@@ -35,8 +35,9 @@ yarn-error.log*
 !.env.example
 !bot/.env.example
 
-# SDD workspace (scratch)
+# SDD workspace (scratch) + plans internes
 /.superpowers/
+/docs/superpowers/
 
 # vercel
 .vercel
