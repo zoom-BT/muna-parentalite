@@ -6,6 +6,7 @@ import { LangueProvider } from "@/components/LangueProvider";
 import { Nav } from "@/components/Nav";
 import { SelecteurLangue } from "@/components/SelecteurLangue";
 import { Assistant } from "@/components/Assistant";
+import { RegisterSW } from "@/components/RegisterSW";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -40,6 +41,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Muna — programme national de parentalité positive · MINPROFF · UNICEF Cameroun
           </footer>
           <Assistant />
+          <RegisterSW />
         </LangueProvider>
       </body>
     </html>
