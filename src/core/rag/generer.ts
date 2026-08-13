@@ -62,6 +62,7 @@ export async function genererReponse(
       body: JSON.stringify({
         model: process.env.GROQ_MODEL || "openai/gpt-oss-20b",
         temperature: 0.3,
+        reasoning_effort: "low",
         messages: [
           { role: "system", content: SYSTEME(langue) },
           {
