@@ -5,6 +5,7 @@ import "./globals.css";
 import { LangueProvider } from "@/components/LangueProvider";
 import { Nav } from "@/components/Nav";
 import { SelecteurLangue } from "@/components/SelecteurLangue";
+import { Assistant } from "@/components/Assistant";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <footer className="border-t border-soft px-4 py-6 text-center text-sm text-muted">
             Muna — programme national de parentalité positive · MINPROFF · UNICEF Cameroun
           </footer>
+          <Assistant />
         </LangueProvider>
       </body>
     </html>
