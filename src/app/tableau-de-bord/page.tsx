@@ -1,6 +1,6 @@
 import { STATS } from "@/data/seed-dashboard";
 
-export const metadata = { title: "Tableau de bord — Muna" };
+export const metadata = { title: "Tableau de bord · Muna" };
 
 function Tuile({ valeur, label }: { valeur: string; label: string }) {
   return (
@@ -16,7 +16,7 @@ export default function TableauDeBordPage() {
     <div className="flex flex-col gap-8">
       <section>
         <h1 className="text-2xl font-extrabold text-ink">
-          Tableau de bord — suivi & évaluation
+          Tableau de bord : suivi et évaluation
         </h1>
         <p className="mt-1 text-muted">
           Portée du programme · pilote <strong>{STATS.region}</strong>. Données

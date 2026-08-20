@@ -48,7 +48,7 @@ export default function FacilitateurPage() {
       <section>
         <h1 className="text-2xl font-extrabold text-ink">Espace facilitateur</h1>
         <p className="mt-1 text-muted">
-          Enrôle des parents et suis leur progression — l'outil qui démultiplie
+          Enrôle des parents et suis leur progression, l'outil qui démultiplie
           le programme sur le terrain, même hors ligne.
         </p>
       </section>

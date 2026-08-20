@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useLangue } from "./LangueProvider";
 
+const TELEGRAM = "https://t.me/MunaParent_bot";
+
 interface Msg {
   role: "user" | "muna";
   texte: string;
@@ -40,16 +42,13 @@ export function Assistant() {
         { role: "muna", texte: d.reponse, sources: d.sources, danger: d.danger },
       ]);
     } catch {
-      setMessages((m) => [
-        ...m,
-        { role: "muna", texte: "…", },
-      ]);
+      setMessages((m) => [...m, { role: "muna", texte: "…" }]);
     } finally {
       setCharge(false);
     }
   }
 
-  // Permet aux pages (ex. chips de suggestions) d'ouvrir l'assistant avec une question
+  // Permet aux pages (chips de suggestions) d'ouvrir l'assistant avec une question
   useEffect(() => {
     const h = (e: Event) => {
       const q = (e as CustomEvent<string>).detail;
@@ -75,32 +74,71 @@ export function Assistant() {
         type="button"
         onClick={() => setOuvert((o) => !o)}
         aria-label="Assistant Muna"
-        className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-brand text-2xl text-white shadow-lg transition-transform hover:scale-105"
+        aria-expanded={ouvert}
+        className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-accent px-5 py-3 font-extrabold text-ink shadow-lg transition-transform hover:scale-105"
       >
-        {ouvert ? "✕" : "💬"}
+        {ouvert ? (
+          <span aria-hidden className="text-lg">
+            ✕
+          </span>
+        ) : (
+          <>
+            <span aria-hidden className="text-xl">
+              🗣️
+            </span>
+            <span>Muna</span>
+          </>
+        )}
       </button>
 
       {ouvert && (
         <div className="fixed bottom-24 right-5 z-40 flex h-[70vh] max-h-[560px] w-[92vw] max-w-sm flex-col overflow-hidden rounded-3xl border border-soft bg-surface shadow-2xl">
           <div className="flex items-center gap-2 bg-brand px-4 py-3 text-white">
-            <span className="text-xl" aria-hidden>🌱</span>
+            <span className="text-xl" aria-hidden>
+              🌱
+            </span>
             <span className="font-bold">Muna</span>
+            <a
+              href={TELEGRAM}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="ml-auto rounded-full bg-white/20 px-3 py-1 text-xs font-semibold hover:bg-white/30"
+            >
+              ✈️ Telegram
+            </a>
           </div>
 
           <div className="flex-1 space-y-3 overflow-y-auto p-4">
             {messages.length === 0 && (
-              <p className="text-sm text-muted">{t.poserQuestion}</p>
+              <div className="space-y-3">
+                <p className="text-sm text-ink">{t.assistantIntro}</p>
+                <div className="flex flex-wrap gap-2">
+                  {t.suggestions.map((s) => (
+                    <button
+                      key={s}
+                      type="button"
+                      onClick={() => envoyer(s)}
+                      className="rounded-full border border-soft bg-cream px-3 py-1 text-xs font-semibold text-brand-dark hover:bg-soft"
+                    >
+                      {s}
+                    </button>
+                  ))}
+                </div>
+                <a
+                  href={TELEGRAM}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 flex items-center justify-center gap-2 rounded-full bg-[#229ed9] px-4 py-2 text-sm font-bold text-white hover:opacity-90"
+                >
+                  ✈️ {t.telegram}
+                </a>
+              </div>
             )}
             {messages.map((m, i) => (
-              <div
-                key={i}
-                className={m.role === "user" ? "text-right" : "text-left"}
-              >
+              <div key={i} className={m.role === "user" ? "text-right" : "text-left"}>
                 <div
                   className={`inline-block max-w-[85%] rounded-2xl px-3 py-2 text-sm ${
-                    m.role === "user"
-                      ? "bg-brand text-white"
-                      : "bg-soft text-ink"
+                    m.role === "user" ? "bg-brand text-white" : "bg-soft text-ink"
                   }`}
                 >
                   {m.danger && (

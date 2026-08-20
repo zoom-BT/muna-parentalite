@@ -8,7 +8,7 @@ export function LecteurAudio({ src, label }: { src: string; label: string }) {
   if (erreur) {
     return (
       <p className="rounded-xl bg-soft px-3 py-2 text-sm text-muted">
-        🔇 {label} — audio bientôt disponible
+        🔇 {label} : audio bientôt disponible
       </p>
     );
   }

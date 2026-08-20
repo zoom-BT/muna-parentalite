@@ -22,6 +22,20 @@ export function reponseLocale(passages: Passage[], langue: Langue): string {
   return passages.map((p) => p.texte[langue]).join("\n\n");
 }
 
+const SALUT =
+  /^\s*(salut|bonjour|bonsoir|coucou|allo|all[oô]|hello|hi|hey|good\s?(morning|evening|afternoon)|jam(bo)?|asalam|as-?salam|sannu)\b/i;
+
+function estSalutation(q: string): boolean {
+  return SALUT.test(q) && q.trim().split(/\s+/).length <= 4;
+}
+
+const BIENVENUE: Record<Langue, string> = {
+  fr: "Bonjour 👋 Je suis Muna, ton assistant de parentalité positive. Pose-moi une question sur ton enfant (colères, encouragement, 1000 premiers jours…) et je t'aide.",
+  en: "Hi 👋 I'm Muna, your positive-parenting assistant. Ask me anything about your child (tantrums, praise, the first 1000 days…) and I'll help.",
+  pidgin:
+    "Hello 👋 Na me Muna, your positive-parenting assistant. Ask me anything about your pikin (vex, praise, the first 1000 days…) and I go help you.",
+};
+
 const SYSTEME = (langue: Langue) =>
   `Tu es Muna, un assistant de parentalité positive au Cameroun, bienveillant et non-jugeant. ` +
   `Réponds en ${
@@ -38,6 +52,9 @@ export async function genererReponse(
   question: string,
   langue: Langue,
 ): Promise<ResultatAssistant> {
+  if (estSalutation(question)) {
+    return { reponse: BIENVENUE[langue], sources: [], danger: false };
+  }
   const danger = analyserDanger(question);
   const passages = rechercher(question, langue, 3);
   const sources = [...new Set(passages.map((p) => p.source))];

@@ -101,6 +101,32 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <section className="grid overflow-hidden rounded-3xl bg-surface shadow-sm md:grid-cols-2">
+        <div className="relative min-h-56">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/photo-a.jpg"
+            alt="Une famille camerounaise réunie devant sa maison."
+            className="h-full w-full object-cover"
+          />
+          <span className="absolute right-2 top-2 rounded-full bg-ink/60 px-2 py-0.5 text-[10px] font-semibold text-white">
+            Photo : UNICEF
+          </span>
+        </div>
+        <div className="flex flex-col justify-center gap-4 p-8">
+          <h2 className="text-2xl font-bold text-ink">{t.communauteTitre}</h2>
+          <p className="leading-relaxed text-muted">{t.communauteTexte}</p>
+          <a
+            href="https://t.me/MunaParent_bot"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex w-fit items-center gap-2 rounded-full bg-[#229ed9] px-5 py-3 text-sm font-bold text-white hover:opacity-90"
+          >
+            ✈️ {t.telegram}
+          </a>
+        </div>
+      </section>
     </div>
   );
 }

@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Muna — grandir ensemble",
+    name: "Muna · grandir ensemble",
     short_name: "Muna",
     description:
-      "Assistant de parentalité positive au Cameroun — multilingue, hors ligne.",
+      "Assistant de parentalité positive au Cameroun : multilingue, hors ligne.",
     start_url: "/",
     display: "standalone",
     background_color: "#fbf6ee",

@@ -20,7 +20,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Your pikin na complete person wey get right. If you respect yi from small, e go grow balanced.",
     },
     motsCles: ["personne", "droits", "respect", "respecter", "dignite", "dignité"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 1",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 1",
   },
   {
     id: "p-perception-positive",
@@ -31,7 +31,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "See the good thing for your pikin first. Pikin no be problem wey you go correct, na person wey di learn and di grow.",
     },
     motsCles: ["perception", "positif", "regard", "voir", "apprend", "grandir"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 1",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 1",
   },
   {
     id: "p-discipline-coleres",
@@ -45,7 +45,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       "colère", "colères", "colere", "coleres", "discipline", "calme", "limite",
       "violence", "frapper", "crier", "comportement", "tantrum",
     ],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 3",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 3",
   },
   {
     id: "p-discipline-sans-violence",
@@ -56,7 +56,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "If you beat or shame pikin, e go learn fear, no be good behaviour. Beating di leave wound. Explain, show example, encourage.",
     },
     motsCles: ["violence educative", "chatiment", "châtiment", "punir", "punition", "fessée", "fessee", "humilier", "battre"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 3",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 3",
   },
   {
     id: "p-encouragement",
@@ -67,7 +67,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Praise your pikin when e do fine. Encouragement and good attention di build good behaviour pass punishment.",
     },
     motsCles: ["féliciter", "feliciter", "encouragement", "encourager", "récompense", "recompense", "attention", "valoriser"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 3",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 3",
   },
   {
     id: "p-communication",
@@ -78,7 +78,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Hear your pikin, talk with yi. When pikin sabi say you di hear yi, e go trust you and talk yi need and yi fear.",
     },
     motsCles: ["communication", "écouter", "ecouter", "parler", "dialogue", "confiance", "besoins", "peurs"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 2",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 2",
   },
   {
     id: "p-jeu",
@@ -89,7 +89,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Play na how pikin di learn. If you play and talk with your pikin every day, e di build yi brain, yi language and yi emotion.",
     },
     motsCles: ["jeu", "jouer", "apprentissage", "eveil", "éveil", "langage", "developpement", "développement", "cerveau"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 3",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 3",
   },
   {
     id: "p-routine",
@@ -100,7 +100,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Regular routine (chop, sleep, play) di give pikin security. When things dey stable, pikin di feel safe.",
     },
     motsCles: ["routine", "habitude", "sécurité", "securite", "sommeil", "repas", "stabilité", "stabilite"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 3",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 3",
   },
   {
     id: "p-1000jours-nutrition",
@@ -111,7 +111,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "The first 1000 days, from belle reach two years, na the most important. Breast milk and good chop di build the foundation of health and development.",
     },
     motsCles: ["1000 jours", "mille jours", "grossesse", "allaitement", "nutrition", "alimentation", "bebe", "bébé", "nourrisson"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 4",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 4",
   },
   {
     id: "p-1000jours-stimulation",
@@ -122,7 +122,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "From when pikin born, talk, sing, answer yi. This early attention di feed yi brain like how chop di feed yi body.",
     },
     motsCles: ["stimulation", "naissance", "bebe", "bébé", "cerveau", "soins attentifs", "reponse", "réponse", "chanter"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 4",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 4",
   },
   {
     id: "p-sante-hygiene",
@@ -133,7 +133,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Protect your pikin health: do all yi vaccine, drink clean water, wash hand, and run go hospital quick if fever or running belle.",
     },
     motsCles: ["santé", "sante", "vaccination", "vaccin", "hygiene", "hygiène", "maladie", "fievre", "fièvre", "diarrhée", "diarrhee"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 4",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 4",
   },
   {
     id: "p-protection-violence",
@@ -144,7 +144,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Pikin get right make dem protect yi from any violence, abuse or neglect. If pikin dey danger, act quick and find help.",
     },
     motsCles: ["protection", "abus", "maltraitance", "négligence", "negligence", "danger", "violence", "aide", "sécurité", "securite"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 2",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 2",
   },
   {
     id: "p-communaute",
@@ -155,7 +155,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "To protect pikin na work for the whole family and community. Neighbour, school and family get role for surround and protect the pikin.",
     },
     motsCles: ["communauté", "communaute", "famille", "voisins", "école", "ecole", "entourage", "role", "rôle", "collectif"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 2",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 2",
   },
   {
     id: "p-stress-toxique",
@@ -166,7 +166,7 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Plenty shout, beating and tension di create toxic stress wey di spoil pikin brain. Calm and loving house di protect yi.",
     },
     motsCles: ["stress toxique", "stress", "tension", "cris", "coups", "cerveau", "foyer", "amour", "climat"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 1",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 1",
   },
   {
     id: "p-planification",
@@ -177,6 +177,6 @@ export const BASE_CONNAISSANCE: Passage[] = [
       pidgin: "Plan time and resource for your pikin: health, school, chop. Even if money no plenty, if you prioritise the important need, e di make big difference.",
     },
     motsCles: ["planification", "planifier", "ressources", "priorisation", "prioriser", "besoins essentiels", "budget", "moyens", "temps"],
-    source: "Guide parentalité positive MINPROFF/UNICEF — Module 5",
+    source: "Guide parentalité positive MINPROFF/UNICEF, Module 5",
   },
 ];

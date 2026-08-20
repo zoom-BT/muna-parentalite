@@ -13,7 +13,7 @@ const body = Figtree({ variable: "--font-body", subsets: ["latin"] });
 const mono = Geist_Mono({ variable: "--font-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Muna — grandir ensemble",
+  title: "Muna · grandir ensemble",
   description:
     "Plateforme inclusive pour la parentalité positive au Cameroun : assistant multilingue, micro-apprentissage, accessibilité et bas-débit.",
   icons: { icon: "/icon-192.png", apple: "/icon-192.png" },
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
           <hr className="ndop-rule mx-auto mt-6 w-full max-w-5xl" />
           <footer className="px-4 py-6 text-center text-sm text-muted">
-            Muna — programme national de parentalité positive · MINPROFF · UNICEF Cameroun
+            Muna · programme national de parentalité positive · MINPROFF · UNICEF Cameroun
           </footer>
           <Assistant />
           <RegisterSW />
