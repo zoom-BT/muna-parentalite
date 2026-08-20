@@ -12,6 +12,7 @@ function liensDe(t: Strings) {
     { href: "/", label: t.navAccueil },
     { href: "/parent", label: t.navParent },
     { href: "/apprendre", label: t.navApprendre },
+    { href: "/podcast", label: t.navPodcast },
     { href: "/facilitateur", label: t.navFacilitateur },
     { href: "/tableau-de-bord", label: t.navTableau },
   ];

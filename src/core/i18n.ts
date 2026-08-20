@@ -55,6 +55,9 @@ export interface Strings {
   facilRappeler: string;
   facilEnroleOk: string;
   facilRappelOk: string;
+  navPodcast: string;
+  podcastTitre: string;
+  podcastIntro: string;
 }
 
 export const T: Record<Langue, Strings> = {
@@ -124,6 +127,10 @@ export const T: Record<Langue, Strings> = {
     facilRappeler: "Rappeler",
     facilEnroleOk: "enrôlé·e à",
     facilRappelOk: "Rappel de leçon envoyé à",
+    navPodcast: "Podcast",
+    podcastTitre: "Podcast Muna",
+    podcastIntro:
+      "Des épisodes courts à écouter, en français, anglais, pidgin et fulfulde, pour apprendre même sans savoir lire.",
   },
   en: {
     brand: "Muna",
@@ -191,6 +198,10 @@ export const T: Record<Langue, Strings> = {
     facilRappeler: "Remind",
     facilEnroleOk: "enrolled in",
     facilRappelOk: "Lesson reminder sent to",
+    navPodcast: "Podcast",
+    podcastTitre: "Muna Podcast",
+    podcastIntro:
+      "Short episodes to listen to, in French, English, Pidgin and Fulfulde, to learn even without reading.",
   },
   pidgin: {
     brand: "Muna",
@@ -258,5 +269,9 @@ export const T: Record<Langue, Strings> = {
     facilRappeler: "Remind",
     facilEnroleOk: "register for",
     facilRappelOk: "Lesson reminder don go to",
+    navPodcast: "Podcast",
+    podcastTitre: "Muna Podcast",
+    podcastIntro:
+      "Short episodes wey you fit listen, for French, English, Pidgin and Fulfulde, to learn even if you no sabi read.",
   },
 };
