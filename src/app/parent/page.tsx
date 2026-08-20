@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLangue } from "@/components/LangueProvider";
 import { listeModules } from "@/core/programme";
+import { IconMessage } from "@/components/icons";
 import type { Langue } from "@/core/types";
 
 const SUGGESTIONS: Record<Langue, string[]> = {
@@ -45,7 +46,9 @@ export default function ParentPage() {
             </button>
           ))}
         </div>
-        <p className="mt-3 text-sm text-muted">💬 {t.poserQuestion}</p>
+        <p className="mt-3 inline-flex items-center gap-1 text-sm text-muted">
+          <IconMessage className="h-4 w-4" /> {t.poserQuestion}
+        </p>
       </section>
 
       <section>

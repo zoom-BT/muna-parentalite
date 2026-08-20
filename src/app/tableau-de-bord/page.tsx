@@ -1,4 +1,5 @@
 import { STATS } from "@/data/seed-dashboard";
+import { IconMapPin } from "@/components/icons";
 
 export const metadata = { title: "Tableau de bord · Muna" };
 
@@ -53,9 +54,9 @@ export default function TableauDeBordPage() {
         </div>
       </section>
 
-      <p className="text-sm text-muted">
-        📍 {STATS.communes} communes couvertes en {STATS.region}. Objectif :
-        passage à l'échelle nationale.
+      <p className="inline-flex items-start gap-1 text-sm text-muted">
+        <IconMapPin className="mt-0.5 h-4 w-4 shrink-0" /> {STATS.communes} communes
+        couvertes en {STATS.region}. Objectif : passage à l'échelle nationale.
       </p>
     </div>
   );

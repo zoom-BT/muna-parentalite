@@ -37,7 +37,7 @@ export default function FacilitateurPage() {
       localStorage.setItem("muna:facilitateur:parents", JSON.stringify(maj));
     } catch {}
     setNom("");
-    setMessage(`✅ ${p.nom} enrôlé·e à ${p.commune}.`);
+    setMessage(`${p.nom} enrôlé·e à ${p.commune}.`);
     setTimeout(() => setMessage(""), 2500);
   }
 
@@ -128,7 +128,7 @@ export default function FacilitateurPage() {
                 <button
                   type="button"
                   onClick={() => {
-                    setMessage(`📩 Rappel de leçon envoyé à ${p.nom}.`);
+                    setMessage(`Rappel de leçon envoyé à ${p.nom}.`);
                     setTimeout(() => setMessage(""), 2500);
                   }}
                   className="rounded-full border border-brand/40 px-3 py-1 text-xs font-bold text-brand-dark hover:bg-brand/10"

@@ -11,6 +11,12 @@ import {
   evaluerQuiz,
   type Progression,
 } from "@/core/microlearning";
+import {
+  IconChevronLeft,
+  IconChevronRight,
+  IconCheck,
+  IconSparkles,
+} from "@/components/icons";
 
 function Contenu() {
   const { langue, t } = useLangue();
@@ -109,9 +115,9 @@ function Contenu() {
               type="button"
               disabled={idx === 0}
               onClick={() => setIdx((i) => i - 1)}
-              className="rounded-full border border-soft px-5 py-2 font-semibold text-ink disabled:opacity-40"
+              className="inline-flex items-center gap-1 rounded-full border border-soft px-5 py-2 font-semibold text-ink disabled:opacity-40"
             >
-              ← {t.precedent}
+              <IconChevronLeft className="h-4 w-4" /> {t.precedent}
             </button>
             <span className="text-sm text-muted">
               {idx + 1} / {messages.length}
@@ -119,9 +125,9 @@ function Contenu() {
             <button
               type="button"
               onClick={() => setIdx((i) => i + 1)}
-              className="rounded-full bg-brand px-5 py-2 font-semibold text-white"
+              className="inline-flex items-center gap-1 rounded-full bg-brand px-5 py-2 font-semibold text-white"
             >
-              {t.suivant} →
+              {t.suivant} <IconChevronRight className="h-4 w-4" />
             </button>
           </div>
         </div>
@@ -170,9 +176,9 @@ function Contenu() {
               <button
                 type="button"
                 onClick={marquerFait}
-                className="mt-4 rounded-full bg-brand px-6 py-3 font-bold text-white"
+                className="mt-4 inline-flex items-center gap-2 rounded-full bg-brand px-6 py-3 font-bold text-white"
               >
-                ✓ {t.valider}
+                <IconCheck className="h-5 w-5" /> {t.valider}
               </button>
             </div>
           )}
@@ -181,7 +187,7 @@ function Contenu() {
 
       {phaseQuiz && (termine || !lecon.quiz) && (
         <div className="rounded-3xl bg-brand/10 p-6 text-center">
-          <p className="text-2xl">🎉</p>
+          <IconSparkles className="mx-auto h-9 w-9 text-accent" />
           <p className="mt-2 font-bold text-brand-dark">
             {t.progression} : {pourcentageModule(module, prog)}%
           </p>

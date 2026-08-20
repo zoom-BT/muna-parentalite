@@ -3,6 +3,14 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useLangue } from "@/components/LangueProvider";
+import {
+  IconGlobe,
+  IconPlay,
+  IconSend,
+  IconUsers,
+  IconGraduationCap,
+  IconLandmark,
+} from "@/components/icons";
 
 const SALUTS = ["Bienvenue", "Welcome", "Wɛlkam", "Jam"]; // fr · en · pidgin · fulfulde
 
@@ -24,9 +32,9 @@ export default function Home() {
   };
 
   const audiences = [
-    { emoji: "👨‍👩‍👧", titre: t.audienceParentsTitre, texte: t.audienceParents },
-    { emoji: "🧑🏾‍🏫", titre: t.audienceFacilitateursTitre, texte: t.audienceFacilitateurs },
-    { emoji: "🏛️", titre: t.audienceInstitutionTitre, texte: t.audienceInstitution },
+    { Icon: IconUsers, titre: t.audienceParentsTitre, texte: t.audienceParents },
+    { Icon: IconGraduationCap, titre: t.audienceFacilitateursTitre, texte: t.audienceFacilitateurs },
+    { Icon: IconLandmark, titre: t.audienceInstitutionTitre, texte: t.audienceInstitution },
   ];
 
   return (
@@ -39,7 +47,7 @@ export default function Home() {
             className="mb-4 inline-flex w-fit items-center gap-2 rounded-full bg-soft px-3 py-1 text-sm font-bold text-brand-dark"
             style={{ animation: "muna-fade 400ms ease-out" }}
           >
-            <span aria-hidden>✋🏾</span> {SALUTS[i]}
+            <IconGlobe className="h-4 w-4" /> {SALUTS[i]}
           </p>
           <h1 className="text-4xl font-extrabold leading-[1.05] text-ink sm:text-5xl">
             {t.heroTitre}
@@ -51,7 +59,7 @@ export default function Home() {
               onClick={ecouter}
               className="inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-base font-bold text-ink transition-transform hover:scale-[1.02]"
             >
-              <span aria-hidden>▶</span> {t.ecouter}
+              <IconPlay className="h-4 w-4" /> {t.ecouter}
             </button>
             <Link
               href="/parent"
@@ -92,9 +100,7 @@ export default function Home() {
               key={a.titre}
               className="rounded-2xl border border-soft bg-surface p-6 shadow-sm"
             >
-              <div className="mb-3 text-4xl" aria-hidden>
-                {a.emoji}
-              </div>
+              <a.Icon className="mb-3 h-9 w-9 text-brand" />
               <h3 className="mb-1 text-lg font-bold text-ink">{a.titre}</h3>
               <p className="text-sm leading-relaxed text-muted">{a.texte}</p>
             </div>
@@ -123,7 +129,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex w-fit items-center gap-2 rounded-full bg-[#229ed9] px-5 py-3 text-sm font-bold text-white hover:opacity-90"
           >
-            ✈️ {t.telegram}
+            <IconSend className="h-4 w-4" /> {t.telegram}
           </a>
         </div>
       </section>

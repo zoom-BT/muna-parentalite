@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useLangue } from "./LangueProvider";
+import { IconBot, IconX, IconSend, IconAlert, IconVolume } from "./icons";
 
 const TELEGRAM = "https://t.me/MunaParent_bot";
 
@@ -78,14 +79,10 @@ export function Assistant() {
         className="fixed bottom-5 right-5 z-40 flex items-center gap-2 rounded-full bg-accent px-5 py-3 font-extrabold text-ink shadow-lg transition-transform hover:scale-105"
       >
         {ouvert ? (
-          <span aria-hidden className="text-lg">
-            ✕
-          </span>
+          <IconX className="h-5 w-5" />
         ) : (
           <>
-            <span aria-hidden className="text-xl">
-              🤖
-            </span>
+            <IconBot className="h-6 w-6" />
             <span>Muna</span>
           </>
         )}
@@ -94,17 +91,15 @@ export function Assistant() {
       {ouvert && (
         <div className="fixed bottom-24 right-5 z-40 flex h-[70vh] max-h-[560px] w-[92vw] max-w-sm flex-col overflow-hidden rounded-3xl border border-soft bg-surface shadow-2xl">
           <div className="flex items-center gap-2 bg-brand px-4 py-3 text-white">
-            <span className="text-xl" aria-hidden>
-              🤖
-            </span>
+            <IconBot className="h-5 w-5" />
             <span className="font-bold">Muna</span>
             <a
               href={TELEGRAM}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto rounded-full bg-white/20 px-3 py-1 text-xs font-semibold hover:bg-white/30"
+              className="ml-auto inline-flex items-center gap-1 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold hover:bg-white/30"
             >
-              ✈️ Telegram
+              <IconSend className="h-3.5 w-3.5" /> Telegram
             </a>
           </div>
 
@@ -130,7 +125,7 @@ export function Assistant() {
                   rel="noopener noreferrer"
                   className="mt-1 flex items-center justify-center gap-2 rounded-full bg-[#229ed9] px-4 py-2 text-sm font-bold text-white hover:opacity-90"
                 >
-                  ✈️ {t.telegram}
+                  <IconSend className="h-4 w-4" /> {t.telegram}
                 </a>
               </div>
             )}
@@ -142,8 +137,8 @@ export function Assistant() {
                   }`}
                 >
                   {m.danger && (
-                    <p className="mb-1 rounded-lg bg-danger px-2 py-1 text-xs font-bold text-white">
-                      ⚠️ 117 · 113
+                    <p className="mb-1 inline-flex items-center gap-1 rounded-lg bg-danger px-2 py-1 text-xs font-bold text-white">
+                      <IconAlert className="h-3.5 w-3.5" /> 117 · 113
                     </p>
                   )}
                   <span className="whitespace-pre-line">{m.texte}</span>
@@ -157,9 +152,9 @@ export function Assistant() {
                   <button
                     type="button"
                     onClick={() => ecouter(m.texte)}
-                    className="mt-1 block text-xs font-semibold text-brand-dark hover:underline"
+                    className="mt-1 inline-flex items-center gap-1 text-xs font-semibold text-brand-dark hover:underline"
                   >
-                    🔊 {t.ecouter}
+                    <IconVolume className="h-3.5 w-3.5" /> {t.ecouter}
                   </button>
                 )}
               </div>
