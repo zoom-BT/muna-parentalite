@@ -65,6 +65,12 @@ export const IconX = (p: P) => (
   </Svg>
 );
 
+export const IconMenu = (p: P) => (
+  <Svg {...p}>
+    <path d="M3 6h18M3 12h18M3 18h18" />
+  </Svg>
+);
+
 export const IconGlobe = (p: P) => (
   <Svg {...p}>
     <circle cx="12" cy="12" r="10" />
