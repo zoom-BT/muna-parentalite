@@ -84,7 +84,7 @@ export function Assistant() {
         ) : (
           <>
             <span aria-hidden className="text-xl">
-              🗣️
+              🤖
             </span>
             <span>Muna</span>
           </>
@@ -95,7 +95,7 @@ export function Assistant() {
         <div className="fixed bottom-24 right-5 z-40 flex h-[70vh] max-h-[560px] w-[92vw] max-w-sm flex-col overflow-hidden rounded-3xl border border-soft bg-surface shadow-2xl">
           <div className="flex items-center gap-2 bg-brand px-4 py-3 text-white">
             <span className="text-xl" aria-hidden>
-              🌱
+              🤖
             </span>
             <span className="font-bold">Muna</span>
             <a
