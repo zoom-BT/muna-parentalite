@@ -34,6 +34,27 @@ export interface Strings {
   progression: string;
   bonneReponse: string;
   mauvaiseReponse: string;
+  dashTitre: string;
+  dashPortee: string;
+  dashDonnees: string;
+  dashParents: string;
+  dashLecons: string;
+  dashTaux: string;
+  dashFacilitateurs: string;
+  dashCompletionModule: string;
+  dashCommunes: string;
+  dashObjectif: string;
+  facilTitre: string;
+  facilIntro: string;
+  facilEnroler: string;
+  facilNom: string;
+  facilNomPlaceholder: string;
+  facilCommune: string;
+  facilBoutonEnroler: string;
+  facilParentsSuivis: string;
+  facilRappeler: string;
+  facilEnroleOk: string;
+  facilRappelOk: string;
 }
 
 export const T: Record<Langue, Strings> = {
@@ -81,6 +102,28 @@ export const T: Record<Langue, Strings> = {
     progression: "Progression",
     bonneReponse: "Bonne réponse !",
     mauvaiseReponse: "Pas tout à fait.",
+    dashTitre: "Tableau de bord : suivi et évaluation",
+    dashPortee: "Portée du programme · pilote",
+    dashDonnees: "Données illustratives.",
+    dashParents: "Parents touchés",
+    dashLecons: "Leçons complétées",
+    dashTaux: "Taux de complétion",
+    dashFacilitateurs: "Facilitateurs actifs",
+    dashCompletionModule: "Complétion par module",
+    dashCommunes: "communes couvertes en",
+    dashObjectif: "Objectif : passage à l'échelle nationale.",
+    facilTitre: "Espace facilitateur",
+    facilIntro:
+      "Enrôle des parents et suis leur progression, l'outil qui démultiplie le programme sur le terrain, même hors ligne.",
+    facilEnroler: "Enrôler un parent",
+    facilNom: "Nom",
+    facilNomPlaceholder: "Nom du parent",
+    facilCommune: "Commune",
+    facilBoutonEnroler: "Enrôler",
+    facilParentsSuivis: "Parents suivis",
+    facilRappeler: "Rappeler",
+    facilEnroleOk: "enrôlé·e à",
+    facilRappelOk: "Rappel de leçon envoyé à",
   },
   en: {
     brand: "Muna",
@@ -126,6 +169,28 @@ export const T: Record<Langue, Strings> = {
     progression: "Progress",
     bonneReponse: "Correct!",
     mauvaiseReponse: "Not quite.",
+    dashTitre: "Dashboard: monitoring & evaluation",
+    dashPortee: "Programme reach · pilot",
+    dashDonnees: "Illustrative data.",
+    dashParents: "Parents reached",
+    dashLecons: "Lessons completed",
+    dashTaux: "Completion rate",
+    dashFacilitateurs: "Active facilitators",
+    dashCompletionModule: "Completion by module",
+    dashCommunes: "communities covered in",
+    dashObjectif: "Goal: national scale-up.",
+    facilTitre: "Facilitator space",
+    facilIntro:
+      "Enroll parents and track their progress, the tool that scales the programme in the field, even offline.",
+    facilEnroler: "Enroll a parent",
+    facilNom: "Name",
+    facilNomPlaceholder: "Parent's name",
+    facilCommune: "Locality",
+    facilBoutonEnroler: "Enroll",
+    facilParentsSuivis: "Parents tracked",
+    facilRappeler: "Remind",
+    facilEnroleOk: "enrolled in",
+    facilRappelOk: "Lesson reminder sent to",
   },
   pidgin: {
     brand: "Muna",
@@ -171,5 +236,27 @@ export const T: Record<Langue, Strings> = {
     progression: "Progress",
     bonneReponse: "Correct!",
     mauvaiseReponse: "No be so.",
+    dashTitre: "Dashboard: monitoring & evaluation",
+    dashPortee: "How the programme di reach · pilot",
+    dashDonnees: "Na example data.",
+    dashParents: "Parents wey we don reach",
+    dashLecons: "Lessons wey dem finish",
+    dashTaux: "Completion rate",
+    dashFacilitateurs: "Facilitators wey dey active",
+    dashCompletionModule: "Completion for each module",
+    dashCommunes: "communities wey we cover for",
+    dashObjectif: "Goal: reach the whole country.",
+    facilTitre: "Facilitator place",
+    facilIntro:
+      "Register parents and follow how dem di progress, the tool wey di scale the programme for ground, even without net.",
+    facilEnroler: "Register one parent",
+    facilNom: "Name",
+    facilNomPlaceholder: "Parent name",
+    facilCommune: "Locality",
+    facilBoutonEnroler: "Register",
+    facilParentsSuivis: "Parents wey we di follow",
+    facilRappeler: "Remind",
+    facilEnroleOk: "register for",
+    facilRappelOk: "Lesson reminder don go to",
   },
 };

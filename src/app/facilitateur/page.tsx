@@ -2,11 +2,13 @@
 
 import { useEffect, useState } from "react";
 import { PARENTS_SEED, type ParentSeed } from "@/data/seed-dashboard";
+import { useLangue } from "@/components/LangueProvider";
 
 const COMMUNES = ["Ngaoundéré", "Tibati", "Meiganga", "Banyo", "Tignère", "Mbé"];
 const LANGUES = ["Fulfulde", "Français", "Pidgin"];
 
 export default function FacilitateurPage() {
+  const { t } = useLangue();
   const [ajoutes, setAjoutes] = useState<ParentSeed[]>([]);
   const [nom, setNom] = useState("");
   const [commune, setCommune] = useState(COMMUNES[0]);
@@ -37,7 +39,7 @@ export default function FacilitateurPage() {
       localStorage.setItem("muna:facilitateur:parents", JSON.stringify(maj));
     } catch {}
     setNom("");
-    setMessage(`${p.nom} enrôlé·e à ${p.commune}.`);
+    setMessage(`${p.nom} ${t.facilEnroleOk} ${p.commune}.`);
     setTimeout(() => setMessage(""), 2500);
   }
 
@@ -46,27 +48,24 @@ export default function FacilitateurPage() {
   return (
     <div className="flex flex-col gap-8">
       <section>
-        <h1 className="text-2xl font-extrabold text-ink">Espace facilitateur</h1>
-        <p className="mt-1 text-muted">
-          Enrôle des parents et suis leur progression, l'outil qui démultiplie
-          le programme sur le terrain, même hors ligne.
-        </p>
+        <h1 className="text-2xl font-extrabold text-ink">{t.facilTitre}</h1>
+        <p className="mt-1 text-muted">{t.facilIntro}</p>
       </section>
 
       <section className="rounded-3xl bg-surface p-6 shadow-sm">
-        <h2 className="mb-3 font-bold text-ink">Enrôler un parent</h2>
+        <h2 className="mb-3 font-bold text-ink">{t.facilEnroler}</h2>
         <form onSubmit={enroler} className="flex flex-wrap items-end gap-3">
           <label className="flex flex-col text-sm font-semibold text-muted">
-            Nom
+            {t.facilNom}
             <input
               value={nom}
               onChange={(e) => setNom(e.target.value)}
               className="mt-1 rounded-xl border border-soft bg-cream px-3 py-2 text-ink outline-none focus:border-brand"
-              placeholder="Nom du parent"
+              placeholder={t.facilNomPlaceholder}
             />
           </label>
           <label className="flex flex-col text-sm font-semibold text-muted">
-            Commune
+            {t.facilCommune}
             <select
               value={commune}
               onChange={(e) => setCommune(e.target.value)}
@@ -78,7 +77,7 @@ export default function FacilitateurPage() {
             </select>
           </label>
           <label className="flex flex-col text-sm font-semibold text-muted">
-            Langue
+            {t.langue}
             <select
               value={langue}
               onChange={(e) => setLangue(e.target.value)}
@@ -93,7 +92,7 @@ export default function FacilitateurPage() {
             type="submit"
             className="rounded-full bg-brand px-6 py-2 font-bold text-white"
           >
-            Enrôler
+            {t.facilBoutonEnroler}
           </button>
         </form>
         {message && <p className="mt-3 text-sm font-semibold text-brand-dark">{message}</p>}
@@ -101,7 +100,7 @@ export default function FacilitateurPage() {
 
       <section>
         <h2 className="mb-3 font-bold text-ink">
-          Parents suivis ({tous.length})
+          {t.facilParentsSuivis} ({tous.length})
         </h2>
         <div className="flex flex-col gap-2">
           {tous.map((p) => (
@@ -128,12 +127,12 @@ export default function FacilitateurPage() {
                 <button
                   type="button"
                   onClick={() => {
-                    setMessage(`Rappel de leçon envoyé à ${p.nom}.`);
+                    setMessage(`${t.facilRappelOk} ${p.nom}.`);
                     setTimeout(() => setMessage(""), 2500);
                   }}
                   className="rounded-full border border-brand/40 px-3 py-1 text-xs font-bold text-brand-dark hover:bg-brand/10"
                 >
-                  Rappeler
+                  {t.facilRappeler}
                 </button>
               </div>
             </div>
