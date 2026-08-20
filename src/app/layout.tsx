@@ -3,7 +3,7 @@ import { Bricolage_Grotesque, Figtree, Geist_Mono } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import { LangueProvider } from "@/components/LangueProvider";
-import { Nav } from "@/components/Nav";
+import { Nav, MenuMobile } from "@/components/Nav";
 import { SelecteurLangue } from "@/components/SelecteurLangue";
 import { Assistant } from "@/components/Assistant";
 import { RegisterSW } from "@/components/RegisterSW";
@@ -29,7 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangueProvider>
           <div className="ndop-band" aria-hidden />
           <header className="sticky top-0 z-30 border-b border-soft bg-cream/90 backdrop-blur">
-            <div className="mx-auto flex w-full max-w-5xl flex-wrap items-center justify-between gap-3 px-4 py-3">
+            <div className="mx-auto flex w-full max-w-5xl items-center justify-between gap-2 px-4 py-3">
               <Link
                 href="/"
                 className="text-2xl font-extrabold tracking-tight text-ink"
@@ -37,9 +37,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               >
                 Muna<span className="text-accent">.</span>
               </Link>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2">
                 <Nav />
                 <SelecteurLangue />
+                <MenuMobile />
               </div>
             </div>
           </header>
