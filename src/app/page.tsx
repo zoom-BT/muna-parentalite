@@ -68,17 +68,18 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Colonne image (photo réelle si /hero.jpg, sinon panneau ndop indigo) */}
-        <div
-          className="relative min-h-56 overflow-hidden rounded-3xl bg-brand-dark shadow-sm"
-          style={{
-            backgroundImage: "url(/hero.jpg)",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-          aria-hidden
-        >
+        {/* Colonne image */}
+        <div className="relative min-h-56 overflow-hidden rounded-3xl bg-brand-dark shadow-sm">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero.jpg"
+            alt="Une mère camerounaise rit tendrement avec son bébé dans les bras."
+            className="h-full w-full object-cover"
+          />
           <div className="ndop-band absolute inset-x-0 bottom-0" />
+          <span className="absolute right-2 top-2 rounded-full bg-ink/60 px-2 py-0.5 text-[10px] font-semibold text-white">
+            Photo : UNICEF
+          </span>
         </div>
       </section>
 
