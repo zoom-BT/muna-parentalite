@@ -7,6 +7,7 @@ import { Nav, MenuMobile } from "@/components/Nav";
 import { SelecteurLangue } from "@/components/SelecteurLangue";
 import { Assistant } from "@/components/Assistant";
 import { RegisterSW } from "@/components/RegisterSW";
+import { SplashIntro } from "@/components/SplashIntro";
 
 const display = Bricolage_Grotesque({ variable: "--font-display", subsets: ["latin"] });
 const body = Figtree({ variable: "--font-body", subsets: ["latin"] });
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <SplashIntro />
         <LangueProvider>
           <div className="ndop-band" aria-hidden />
           <header className="sticky top-0 z-30 border-b border-soft bg-cream/90 backdrop-blur">
