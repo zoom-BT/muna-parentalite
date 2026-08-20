@@ -80,16 +80,6 @@ a {
 .splash-tagline {
   animation: muna-fade 650ms 800ms ease-out both;
 }
-/* Bande ndop qui défile de gauche à droite (façon bandeau d'info TV) */
-.splash-band {
-  height: 18px;
-  background-color: var(--color-ink);
-  background-image:
-    repeating-linear-gradient(45deg, var(--color-accent) 0 5px, transparent 5px 11px),
-    repeating-linear-gradient(-45deg, var(--color-accent) 0 5px, transparent 5px 11px);
-  background-size: 22px 22px;
-  animation: muna-band-scroll 900ms linear infinite;
-}
 @keyframes muna-bounce {
   0% {
     opacity: 0;
@@ -107,14 +97,6 @@ a {
   }
   100% {
     transform: translateY(0) scale(1);
-  }
-}
-@keyframes muna-band-scroll {
-  from {
-    background-position: 0 0, 0 0;
-  }
-  to {
-    background-position: 22px 0, 22px 0;
   }
 }
 

@@ -23,8 +23,6 @@ export function SplashIntro() {
         phase === "out" ? "opacity-0" : "opacity-100"
       }`}
     >
-      <div className="splash-band absolute inset-x-0 top-0" />
-
       <div className="splash-logo flex flex-col items-center px-6 text-center">
         <span
           className="text-6xl font-extrabold tracking-tight text-ink"
@@ -36,8 +34,6 @@ export function SplashIntro() {
           grandir ensemble
         </span>
       </div>
-
-      <div className="splash-band absolute inset-x-0 bottom-0" />
     </div>
   );
 }
