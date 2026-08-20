@@ -3,6 +3,7 @@ import type { Langue } from "./types";
 export interface Strings {
   brand: string;
   tagline: string;
+  heroTitre: string;
   sousTitre: string;
   navAccueil: string;
   navParent: string;
@@ -34,6 +35,7 @@ export const T: Record<Langue, Strings> = {
   fr: {
     brand: "Muna",
     tagline: "Grandir ensemble",
+    heroTitre: "Élever un enfant, ça s'apprend — ensemble.",
     sousTitre:
       "Le programme national de parentalité positive, accessible à tous les parents — même hors ligne, même en langue locale.",
     navAccueil: "Accueil",
@@ -67,6 +69,7 @@ export const T: Record<Langue, Strings> = {
   en: {
     brand: "Muna",
     tagline: "Growing up together",
+    heroTitre: "Raising a child is something you learn — together.",
     sousTitre:
       "The national positive-parenting programme, within reach of every parent — even offline, even in a local language.",
     navAccueil: "Home",
@@ -100,6 +103,7 @@ export const T: Record<Langue, Strings> = {
   pidgin: {
     brand: "Muna",
     tagline: "Make we grow together",
+    heroTitre: "To raise pikin na thing wey we fit learn — together.",
     sousTitre:
       "The national positive-parenting programme for all parents — even without net, even for your own language.",
     navAccueil: "Home",

@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cream: #fbf6ee;
+  /* Ndop × Adamaoua — indigo de résistance + terres sahéliennes */
+  --color-cream: #f7f1e4; /* sable chaud (fond) */
   --color-surface: #ffffff;
-  --color-ink: #2b2320;
-  --color-muted: #6b5f57;
-  --color-brand: #1f8a70;
-  --color-brand-dark: #166b56;
-  --color-accent: #d9743f;
-  --color-soft: #f1e7d8;
+  --color-ink: #1b2a4a; /* encre indigo (texte, marque) */
+  --color-muted: #5c6373;
+  --color-brand: #2e4b8b; /* indigo vif (actions, actif) */
+  --color-brand-dark: #1b2a4a;
+  --color-accent: #e8a128; /* marigold */
+  --color-feuille: #3e7d5a; /* vert « grandir » */
+  --color-soft: #ece3d0; /* sable soutenu (puces, bordures) */
   --color-danger: #c0392b;
 
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-mono);
 }
 
 body {
@@ -21,12 +24,60 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
-/* Accessibilité : cibles tactiles confortables, focus visible */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), var(--font-sans), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+/* Signature : bandeau tissé ndop (losanges marigold sur indigo) */
+.ndop-band {
+  height: 12px;
+  background-color: var(--color-ink);
+  background-image:
+    repeating-linear-gradient(45deg, var(--color-accent) 0 5px, transparent 5px 11px),
+    repeating-linear-gradient(-45deg, var(--color-accent) 0 5px, transparent 5px 11px);
+  background-size: 11px 11px;
+}
+
+/* Filet ndop fin (séparateurs) */
+.ndop-rule {
+  height: 4px;
+  border: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    var(--color-accent) 0 4px,
+    var(--color-ink) 4px 8px
+  );
+  border-radius: 2px;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
 button,
 a {
   -webkit-tap-highlight-color: transparent;
 }
-:focus-visible {
-  outline: 3px solid var(--color-brand);
-  outline-offset: 2px;
+
+@keyframes muna-fade {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
 }
